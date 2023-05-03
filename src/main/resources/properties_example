@@ -19,8 +19,8 @@ spring.main.web-environment=false
 security.require-ssl=false
 
 # Do not initialize anything
-spring.jpa.hibernate.ddl-auto=none
-spring.datasource.initialization-mode=never
+spring.jpa.hibernate.ddl-auto=create
+spring.datasource.initialization-mode=always
 
 
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
@@ -74,4 +74,4 @@ spring.servlet.multipart.max-request-size=8GB
 
 # logs
 logging.file = ./logs/nepaccess.log
-logging.level.root = INFO
+logging.level.root = DEBUG

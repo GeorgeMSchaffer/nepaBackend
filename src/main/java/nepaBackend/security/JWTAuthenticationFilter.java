@@ -64,8 +64,9 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         res.getWriter().write(
                 "{\"" + SecurityConstants.HEADER_STRING + "\":\"" + SecurityConstants.TOKEN_PREFIX + token + "\"}"
         ); // include JWT in body
+        System.out.println("JWTAuthenticationFilter: " + SecurityConstants.HEADER_STRING + ": " + SecurityConstants.TOKEN_PREFIX + token);
         res.getWriter().flush();
-        res.getWriter().close();
-//        res.addHeader(SecurityConstants.HEADER_STRING, SecurityConstants.TOKEN_PREFIX + token);
+        res.getWriter().close();        
+        res.addHeader(SecurityConstants.HEADER_STRING, SecurityConstants.TOKEN_PREFIX + token);
     }
 }

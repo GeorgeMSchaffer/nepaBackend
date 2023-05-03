@@ -30,6 +30,7 @@ public class Globals {
 //    private static final String META_TESTING_INDEX_DIRECTORY_PATH = "C:\\gitrepo\\uapBackend\\uapBackend\\EISDoc";
     
     public static final Path getIndexPath() {
+		System.out.println("TESTING: VAR IN getIndexPath "+TESTING);
     	if(TESTING) {
     		return Path.of(TESTING_INDEX_DIRECTORY_PATH);
     	} else if (SecurityConstants.BIGHORN) {
