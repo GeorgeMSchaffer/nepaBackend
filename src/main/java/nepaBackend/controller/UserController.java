@@ -100,7 +100,8 @@ public class UserController {
     @GetMapping("/getAll")
     private @ResponseBody ResponseEntity<List<Object>> getUsersLimited(@RequestHeader Map<String, String> headers) {
     	
-//    	String token = headers.get("authorization");
+    	String token = headers.get("authorization");
+		System.out.println("token: " + token);
     	
     	if(checkAdmin(headers).getBody() || checkCurator(headers).getBody() || checkApprover(headers).getBody() ) {
     		return new ResponseEntity<List<Object>>(applicationUserRepository.findLimited(), HttpStatus.OK);

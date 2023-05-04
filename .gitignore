@@ -14,3 +14,4 @@ src/main/resources/application-prod.properties
 src/main/java/nepaBackend/LuceneHighlighter.java
 logs/
 *.properties
+**/node_modules

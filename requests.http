@@ -1,10 +1,19 @@
 @host = http://127.0.0.1:8080/nepaBackend/
 
-@jwt = eyJhbGciOiJIUzUxMiJ9.dGVzdF9rZXlfb25seQ.b1J2BbcMkZ5y6dkTAxTHMU0HrxXbVfeaGEyFz-MX3_p-7R27HSLctwfVk_qLsBnB2ewa6c6py46JC3UGibhN1w 
-GET {{host}}user/exists HTTP/1.1
+@jwt = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE2ODMwNjA0MTMsImV4cCI6MTcxNzEwMjAxMywiYXVkIjoid3d3LmV4YW1wbGUuY29tIiwic3ViIjoianJvY2tldEBleGFtcGxlLmNvbSIsIkdpdmVuTmFtZSI6IkpvaG5ueSIsIlN1cm5hbWUiOiJSb2NrZXQiLCJFbWFpbCI6Impyb2NrZXRAZXhhbXBsZS5jb20iLCJSb2xlIjpbIk1hbmFnZXIiLCJQcm9qZWN0IEFkbWluaXN0cmF0b3IiXX0.kx3pKwS5x5izMTDOr-JsX_KlejfopxPGueoeBXPAgsF5fo7hKKc1pIBCI597seAD5rRxcO8cbia6u7d89MiFBg
+GET {{host}} HTTP/1.1
 SECRET: TEST_ONLY
 APP_KEY: test_key_only
 Authorization: Bearer {{jwt}}
 //Jwt-Token: {{jwt}}
 Content-Type: application/json
 ### 
+GET {{host}}admin/findAllFileLogs HTTP/1.1
+SECRET: TEST_ONLY
+APP_KEY: test_key_only
+Authorization: Bearer {{jwt}}
+//Jwt-Token: {{jwt}}
+Content-Type: application/json
+
+
+
